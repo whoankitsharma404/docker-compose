@@ -47,7 +47,7 @@ docker-compose up --build
 ```
 
 ## Docker Compose Configuration
-## Below is the Docker Compose configuration (docker-compose.yml) used to define and orchestrate your application's Docker containers:
+ Below is the Docker Compose configuration (docker-compose.yml) used to define and orchestrate your application's Docker containers:
 
 ```
 version: '3.8'
