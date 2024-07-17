@@ -10,6 +10,8 @@ WORKDIR /usr/src/myapp/
 COPY . /usr/src/myapp
 CMD [ "java", "-jar", "website-0.0.1-SNAPSHOT.jar" ]
 
+```
+
 
 # Maven and Docker Integration
 
@@ -41,4 +43,6 @@ cd "C:\Users\ankit.sharma22\Desktop\docker-compose\"
 
 # Build and run the Docker containers
 docker-compose up --build
+
+```
 
