@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  app:
+    build: ./boot
+    depends_on:
+      - db
+    image: website-image
+    container_name: website
+    ports:
+      - "9999:9999"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/website_db?createDatabaseIfNotExists=true
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    # networks:
+    #   - spring-boot-network
+
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: website_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgres_data:/var/lib/postgresql
+    # networks:
+    #   - spring-boot-network
+
+# networks:
+#   spring-boot-network:
+#     driver: bridge
+
+# volumes:
+#   postgres_data:
