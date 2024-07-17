@@ -81,5 +81,22 @@ services:
 
 ```
 
+## Steps to Run:
+
+1. Open PowerShell as Administrator.
+
+2. Navigate to the directory containing the build-and-deploy.ps1 script:
+
+```
+cd C:\path\to\your\project\scripts
+```
+3. Run the script:
+
+```
+.\build-and-deploy.ps1
+```
+
+
+
 
 
